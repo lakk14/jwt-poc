@@ -18,7 +18,7 @@ module.exports = {
                 lastname: user.last_name,
                 mobile: user.mobile,
                 gender: user.gender,
-                role: user.role,
+                address: user.address,
             };
             return res.status(200).send(response(200, 'OK', finalUser));
         } catch (err) {
