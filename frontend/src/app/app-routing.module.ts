@@ -1,13 +1,14 @@
+import { UserDetailsComponent } from './user-details/user-details.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './Components/login/login.component';
-import { DisplayUserComponent } from './Components/display-user/display-user.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'displayUser', component: DisplayUserComponent },
+  { path: 'display-user', component: UserDetailsComponent},
+  { path: '**', component: LoginComponent}
 ];
 
 @NgModule({
@@ -15,3 +16,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents = [ LoginComponent ];

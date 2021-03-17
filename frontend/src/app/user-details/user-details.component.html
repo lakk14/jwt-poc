@@ -1,0 +1,36 @@
+<div class="py-5">
+  <div class="col-md-7 mx-auto">
+    <mat-card class="card rounded-2">
+      <div class="card-header" align="center">
+        <mat-card-title>
+          <mat-icon>person</mat-icon><br> Name :- {{userInfo.firstname}} {{userInfo.lastname}}
+        </mat-card-title>
+      </div>
+      <mat-card-content>
+        <div class=" row">
+          <div class=" col-md-6 pr-md-1 spaced">
+            <b>Email </b><br>{{userInfo.email}}
+          </div>
+          <div class=" col-md-6 pr-md-1 spaced">
+            <b>Full Name </b><br>{{userInfo.fullname}}
+          </div>
+        </div>
+
+        <div class=" row">
+          <div class=" col-md-6 pr-md-1 spaced">
+            <b>Mobile Number</b><br>{{userInfo.mobile}}
+          </div>
+          <div class=" col-md-6 pr-md-1 spaced">
+            <b>Gender</b><br>{{userInfo.gender}}
+          </div>
+        </div>
+
+        <div class=" row" *ngIf="userInfo.address != undefined">
+          <div class=" col-md-12 pr-md-1 spaced">
+            <b>Address</b><br>{{userInfo.address}}
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

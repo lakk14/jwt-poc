@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "user-poc": {
+    "jwt-poc": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/user-poc",
+            "outputPath": "dist/jwt-poc",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "user-poc:build"
+            "browserTarget": "jwt-poc:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "user-poc:build:production"
+              "browserTarget": "jwt-poc:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "user-poc:build"
+            "browserTarget": "jwt-poc:build"
           }
         },
         "test": {
@@ -112,19 +112,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "user-poc:serve"
+            "devServerTarget": "jwt-poc:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "user-poc:serve:production"
+              "devServerTarget": "jwt-poc:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "user-poc",
+  "defaultProject": "jwt-poc",
   "cli": {
-    "analytics": "f3afbd2f-f026-4a2d-9c12-5229ee409561"
+    "analytics": false
   }
 }
