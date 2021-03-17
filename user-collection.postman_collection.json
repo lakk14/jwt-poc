@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "e96109cf-fd4c-4bca-93c1-a21da27c5bfd",
+		"name": "user-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"laukik@gmail.com\",\n    \"password\": \"1234567890\",\n    \"firstname\": \"Laukik\",\n    \"lastname\": \"Kakade\",\n    \"mobile\": \"9623010870\",\n    \"gender\": \"Male\",\n    \"address\": \"Pune\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"laukik@gmail.com\",\n    \"password\": \"1234567890\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3200/api/user/laukikkakade8@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"api",
+						"user",
+						"laukikkakade8@gmail.com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
